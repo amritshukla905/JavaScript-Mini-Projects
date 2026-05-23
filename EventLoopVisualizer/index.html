@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Event Loop Visualizer</title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "left">
+                <h2>Code</h2>
+                <textarea id ="codeBox" >
+                    console.log("Start");
+                    setTimeout(()=>{
+                        console.log("Timeout Callback");
+                    },2000);
+                    console.log("End");
+                </textarea>
+                <div class = "controls">
+                    <button id = "rnbtn">Run</button>
+                </div>
+            </div>
+            <div class = "right">
+                <div class = "box">
+                    <h3> Call Stack</h3>
+                    <div id = "stack"></div>
+                </div>
+                <div class = "box">
+                    <h3> Web APIs</h3>
+                    <div id = "webapi"></div>
+                </div>
+                <div class = "box">
+                    <h3> Callback Queue</h3>
+                    <div id = "que"></div>
+                </div>
+                <div class = "box">
+                    <h3> Console</h3>
+                    <div id = "console"></div>
+                </div>
+            </div>
+        </div>
+        <script src = "script.js"></script>
+    </body>
+</html>
