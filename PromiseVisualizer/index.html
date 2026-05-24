@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="left">
+
+    <h1>Promise Visualizer</h1>
+
+    <textarea id="codeBox">
+console.log("Start");
+
+Promise.resolve().then(() => {
+    console.log("Promise Callback");
+});
+
+console.log("End");
+    </textarea>
+
+    <button id="runBtn">Run</button>
+
+  </div>
+
+  <div class="right">
+
+    <div class="box">
+      <h2>Call Stack</h2>
+      <div id="stack"></div>
+    </div>
+
+    <div class="box">
+      <h2>Microtask Queue</h2>
+      <div id="microtask"></div>
+    </div>
+
+    <div class="box">
+      <h2>Console</h2>
+      <div id="console"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
